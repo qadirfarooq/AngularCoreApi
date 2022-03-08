@@ -1,0 +1,30 @@
+dotnet --info 
+dotnet -h // help
+dotnet new -h
+dotnet new sln
+dotnet new webapi -o API
+dotnet sln add API
+dotnet run
+dotnet watch run
+donet dev-certs https --trust
+Entity Frame Work: Object relational Mapper . translates our code to Sql command to update SQl Tables. keep tracking of changes. allow us to wrtie linq quries
+concurancy: optimistic cucorancy transcation management  override protection by default.  ( doesn't allow changes as other user is fetching the data. 
+saving (insert, update, delete)
+build in conventions
+configuration
+migration. create db schema , auto db on server power full to create db.
+
+Dbcontext : bridge between our entity class and Database
+Dbcontext allow us to write Linq Queries and sqlite provider translate it to sql command
+Sqlite is file base DB writes on file
+// goolge for dotnet-ef only get the version that you need. do dotnet --info first to see your local version
+dotnet tool install --global dotnet-ef --version 6.0.1
+
+dotnet ef migrations add InitialCreate -o Data/Migrations
+dotnet ef migrations add InitialCreate -o Data/Migrations 
+dotnet ef database update
+
+git status
+git init
+dotnet new gitignore
+--go to folder find gitignore file and add appsettings.json at the end so that this json file should not be stored
