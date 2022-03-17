@@ -27,4 +27,15 @@ dotnet ef database update
 git status
 git init
 dotnet new gitignore
---go to folder find gitignore file and add appsettings.json at the end so that this json file should not be stored
+git commit -m "Initial commit."
+ git push -u origin master   
+// if have ssl certificate issue use this command 
+git config --global http.sslBackend schannel
+
+git push -u origin main
+// print commit history
+// git log --oneline
+// to remove large file or file you added use this command. If you know which commit introduced the huge file (say 35dsa2), you can replace HEAD with 35dsa2..HEAD to avoid rewriting too much history, thus avoiding diverging commits if you haven't pushed yet. 
+//git filter-branch --tree-filter 'rm -f Postman-win64-9.13.0-Setup.exe' HEAD   
+
+                                                                               
