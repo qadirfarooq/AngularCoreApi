@@ -26,6 +26,8 @@ dotnet ef database update
 
 git status
 git init
+git config --global user.email farooq.qadir@gmail.com
+git config --global user.name qadirfarooq
 dotnet new gitignore
 git commit -m "Initial commit."
  git push -u origin master   
@@ -37,5 +39,12 @@ git push -u origin main
 // git log --oneline
 // to remove large file or file you added use this command. If you know which commit introduced the huge file (say 35dsa2), you can replace HEAD with 35dsa2..HEAD to avoid rewriting too much history, thus avoiding diverging commits if you haven't pushed yet. 
 //git filter-branch --tree-filter 'rm -f Postman-win64-9.13.0-Setup.exe' HEAD   
+npm install -g @Angular/cli@12
+// in extension 
+//nstall angular language service
+// install snippet // by john papa
+// bracket pair colorizer 2
+// add pwd hash byte to appuser entity and run
+dotnet ef migrations add userpwd
 
                                                                                
