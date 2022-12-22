@@ -46,5 +46,23 @@ npm install -g @Angular/cli@12
 // bracket pair colorizer 2
 // add pwd hash byte to appuser entity and run
 dotnet ef migrations add userpwd
+dotnet ef database update
+// under the client/src/app folder run this command to add componnet at command prompt
 
+ng g c nav --skip-tests
+
+// add new _service folder in app folder use this command to add new service
+ng g service account --skip--tests
+// new componnet at app folder 
+ C:\FarooqBackup\AngularDotnet-Course-Good\client\src\app> ng g c home --skip-tests
+ // to run appp
+
+ ng serve
+// create new home page
+
+ ng g c home --skip-tests
+
+ 
+
+ 
                                                                                
