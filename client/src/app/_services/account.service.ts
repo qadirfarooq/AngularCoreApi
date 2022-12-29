@@ -22,7 +22,7 @@ export class AccountService {
           this.currentUserSource.next(user);
         }
       })
-    )
+    ) 
   }
   Register(model: any){
     return this.http.post<User>(this.baseURl +'account/register',model).pipe(

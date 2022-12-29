@@ -61,6 +61,7 @@ ng g service account --skip--tests
 // create new home page
 
  ng g c home --skip-tests
+ ng g --help
 
  
 
