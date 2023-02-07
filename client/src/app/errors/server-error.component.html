@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>server error found - refresh </h1>
+
+  <ng-container *ngIf="error" >
+
+    <h5> Error: {{error.message}}</h5>
+    <p> Note if you are seeing this its a 500 server error</p>
+
+    <p>what to do next </p>
+
+    <ol>
+      <li> open chrome dev tool .. failed at newtwork. </li>
+    </ol>
+
+    <code class="mt-5" style="background-color: whitesmoke;"> {{error.details}}</code>
+  </ng-container>
+   <button class="btn btn-info" routerLink="/"> return to home
+
+  </button>
+</div>>

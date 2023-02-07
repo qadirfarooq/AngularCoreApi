@@ -1,7 +1,9 @@
 
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
     <div class="container">
-      <a class="navbar-brand" routerLink="/home" routerLinkActive="active">Datting app</a>
+      <a class="navbar-brand" routerLink="/" routerLinkActive="active">Datting app</a>
+
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -20,8 +22,9 @@
           <a class="nav-link" (click)="logout()">Logout</a>
         </li>
       </ul> -->
+      <ul class="navbar-nav mr-auto" >
       <ng-container *ngIf="accountService.currentuser$ | async">
-        <ul class="navbar-nav mr-auto" *ngIf="accountService.currentuser$ | async">
+
           <li class="nav-item">
             <a class="nav-link" routerLink="/members" routerLinkActive="active">Maches</a>
           </li>
@@ -31,11 +34,27 @@
           <li class="nav-item">
             <a class="nav-link" routerLink="/messeage" routerLinkActive="active">Messeage</a>
           </li>
+
+
+
+
           <li class="nav-item">
             <a class="nav-link" (click)="logout()">Logout</a>
           </li>
+
+
+
+        </ng-container>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/errors" routerLinkActive="active">Errors</a>
+          </li>
+
         </ul>
-      </ng-container>
+
+
+
+
+
       <div class="dropdown" *ngIf="(accountService.currentuser$ | async) as user" dropdown>
         <a  class="dropdown-toggle text-light" dropdownToggle>Welcome  {{user.userName | titlecase}}</a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
