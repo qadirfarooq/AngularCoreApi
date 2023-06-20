@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 import {map} from 'rxjs/operators'
 import { User } from '../_modal/user';
 import { ReplaySubject } from 'rxjs';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class AccountService {
-  baseURl ="https://localhost:7290/api/";
+  baseURl =environment.apiUrl;
   private currentUserSource = new ReplaySubject<User>(1);
   currentuser$ = this.currentUserSource.asObservable();
 
@@ -22,7 +23,7 @@ export class AccountService {
           this.currentUserSource.next(user);
         }
       })
-    ) 
+    )
   }
   Register(model: any){
     return this.http.post<User>(this.baseURl +'account/register',model).pipe(

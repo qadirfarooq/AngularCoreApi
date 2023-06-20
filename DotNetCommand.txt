@@ -64,6 +64,8 @@ ng g service account --skip--tests
  ng g --help
 
  
+// create new service in _service folder 
+ng g s _services/members --skip-tests
 
  
                                                                                

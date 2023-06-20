@@ -20,7 +20,9 @@ import { TestErrorComponent } from './errors/test-error.component';
 import { ErrorInterceptor } from './_interceptors/error.interceptor';
 import { NotfoundComponent } from './errors/notfound.component';
 import { ServerErrorComponent } from './errors//server-error.component';
-
+import { MemberCardComponent } from './members/member-card/member-card.component';
+import { JwtInterceptor } from './_interceptors/jwt.interceptor';
+//import { AngularFontAwesomeModule } from 'angular-font-awesome';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,7 @@ import { ServerErrorComponent } from './errors//server-error.component';
     TestErrorComponent,
     NotfoundComponent,
     ServerErrorComponent,
+    MemberCardComponent,
 
   ],
   imports: [
@@ -42,11 +45,13 @@ import { ServerErrorComponent } from './errors//server-error.component';
     HttpClientModule,
     BrowserAnimationsModule,
     FormsModule,
-    SharedModule
+    SharedModule,
+    //AngularFontAwesomeModule
 
   ],
   providers: [
-    {provide : HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true }
+    {provide : HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
+    {provide : HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })
