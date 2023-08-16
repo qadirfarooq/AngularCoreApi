@@ -10,7 +10,9 @@ import { environment } from 'src/environments/environment';
 export class AccountService {
   baseURl =environment.apiUrl;
   private currentUserSource = new ReplaySubject<User>(1);
-  currentuser$ = this.currentUserSource.asObservable();
+
+
+  currentUser$ = this.currentUserSource.asObservable();
 
   constructor(private http:HttpClient) { }
 
@@ -41,6 +43,7 @@ export class AccountService {
   setCurrentUser(user : User)
   {
     this.currentUserSource.next(user)
+
   }
   logout(){
     localStorage.removeItem('user');

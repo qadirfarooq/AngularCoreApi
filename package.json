@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@angular-devkit/build-angular": "^15.2.9",
+    "cjs-loader": "^0.1.0",
+    "webpack": "^5.88.1"
+  }
+}

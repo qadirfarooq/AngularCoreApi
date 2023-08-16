@@ -8,7 +8,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
-      <!-- <ul class="navbar-nav mr-auto" *ngIf="accountService.currentuser$ | async">
+      <!-- <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ | async">
         <li class="nav-item">
           <a class="nav-link" routerLink="/members" routerLinkActive="active">Maches</a>
         </li>
@@ -23,7 +23,7 @@
         </li>
       </ul> -->
       <ul class="navbar-nav mr-auto" >
-      <ng-container *ngIf="accountService.currentuser$ | async">
+      <ng-container *ngIf="accountService.currentUser$ | async">
 
           <li class="nav-item">
             <a class="nav-link" routerLink="/members" routerLinkActive="active">Maches</a>
@@ -55,15 +55,16 @@
 
 
 
-      <div class="dropdown" *ngIf="(accountService.currentuser$ | async) as user" dropdown>
+      <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
         <a  class="dropdown-toggle text-light" dropdownToggle>Welcome  {{user.userName | titlecase}}</a>
         <div class="dropdown-menu mt-3" *dropdownMenu>
-          <a  class="dropdown-item">Edit profile</a>
+          <a  class="dropdown-item" routerLink="/member/edit">Edit profile {{user.userName | titlecase}}</a>
           <a class="dropdown-item" (click)="logout()">Logout</a>
 
         </div>
       </div>
-      <form *ngIf="(accountService.currentuser$ | async) ===null " [hidden] #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
+
+      <form *ngIf="(accountService.currentUser$ | async) ===null " [hidden] #loginForm="ngForm" class="form-inline mt-2 mt-md-0" (ngSubmit)="login()">
         <input name="usrname" [(ngModel)]="model.username"  class="form-control mr-sm-2" type="text" placeholder="UserName">
         <input name="password" [(ngModel)]="model.password" class="form-control mr-sm-2" type="password" placeholder="Password">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Login</button>

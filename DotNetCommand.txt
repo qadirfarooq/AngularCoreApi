@@ -67,5 +67,7 @@ ng g service account --skip--tests
 // create new service in _service folder 
 ng g s _services/members --skip-tests
 
+ ng  g c members/member-edit --skip-tests
+
  
                                                                                

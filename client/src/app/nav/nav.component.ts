@@ -26,13 +26,13 @@ export class NavComponent implements OnInit {
       //this.loggedIn = true;
       this.router.navigateByUrl('/members');
     },
-    // error =>{
-    //   this.toastr.error(error.error);
-    //   console.log(error);
-    // }
+    error =>{
+      this.toastr.error(error.error);
+      console.log(error);
+    }
 
     )
-    console.log(this.model)
+    //console.log(this.model)
   }
 
   logout(){
@@ -42,7 +42,7 @@ export class NavComponent implements OnInit {
   }
 
   // getCurrentUSer(){
-  //   this.accountService.currentuser$.subscribe(user =>{
+  //   this.accountService.currentUser$.subscribe(user =>{
   //     this.loggedIn = !!user;
   //   }, error =>{
   //     console.log(error)
