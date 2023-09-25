@@ -25,7 +25,7 @@ var _Key = builder.Configuration.GetValue<string>("TokenKey");
 // builder.Services.AddDbContext<DataContext>(options =>{
 //     options.UseSqlite(connectionString);
 // });
-builder.Services.AddApplicationServices(connectionString);
+builder.Services.AddApplicationServices(connectionString,builder.Configuration);
 builder.Services.AddCors();
 
 // moved to Identity Services

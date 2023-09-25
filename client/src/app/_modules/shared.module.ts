@@ -8,6 +8,7 @@ import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 // Import library module
 import { NgxSpinnerModule } from "ngx-spinner";
+
 interface NgxSpinnerConfig {
   type?: 'ball-scale-multiple';
 }
@@ -20,7 +21,8 @@ interface NgxSpinnerConfig {
     ToastrModule.forRoot({
       positionClass : 'toast-bottom-right'
     }),
-    NgxSpinnerModule
+    NgxSpinnerModule,
+
 
 
     //NgxGalleryModule
@@ -29,7 +31,9 @@ interface NgxSpinnerConfig {
     BsDropdownModule,
     ToastrModule,
     TabsModule,
-    NgxSpinnerModule
+    NgxSpinnerModule,
+
+
     //NgxGalleryModule
   ],
 })

@@ -44,6 +44,21 @@ updateMember(member: Member)
     })
   );
 }
+
+
+
+setMainPhoto(photId: number)
+{
+  return this.http.put(this.baseUrl + 'users/set-main-photo/' + photId, {});
+}
+
+deletePhoto(photId: number)
+{
+   return this.http.delete(this.baseUrl+ 'users/delete-photo/' + photId)
+}
+
+
+
   // getHttpOptions ()
   // {
   //   const userString = localStorage.getItem('user');
